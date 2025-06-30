@@ -1,6 +1,6 @@
 # 💱 Conversor de Monedas Dinámico
 
-![Banner](img/banner.jpg) 
+![Banner](img/banners.jpg) 
 
 ---
 
