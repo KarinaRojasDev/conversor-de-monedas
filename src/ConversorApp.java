@@ -8,7 +8,7 @@ public class ConversorApp {
 
         if ("success".equals(response.getResult())) {
             ConversorApp app = new ConversorApp();
-            app.moneda(response);  // pasamos el objeto con las tasas
+            app.moneda(response);
         } else {
             System.out.println("No se pudo obtener las tasas de conversión.");
         }
@@ -18,7 +18,7 @@ public class ConversorApp {
         Scanner scn = new Scanner(System.in);
         int opcion;
         do{
-            System.out.println("********************************");
+            System.out.println("********************************************");
             System.out.println("Bienvenido/a al Conversor de Moneda");
             System.out.println("1) Dólar => Peso Argentino");
             System.out.println("2) Peso Argentino => Dólar");
@@ -37,37 +37,37 @@ public class ConversorApp {
                     System.out.print("Ingrese cantidad en Dólares: ");
                     cantidad = scn.nextDouble();
                     resultado = cantidad * moneda.getConversion_rates().get("ARS");
-                    System.out.println(cantidad + " USD son " + resultado + " ARS");
+                    System.out.println("El valor de "+cantidad + " [USD] son =>> " + resultado + " [ARS]");
                     break;
                 case 2:
                     System.out.print("Ingrese cantidad en Pesos Argentinos: ");
                     cantidad = scn.nextDouble();
                     resultado = cantidad / moneda.getConversion_rates().get("ARS");
-                    System.out.println(cantidad + " ARS son " + resultado + " USD");
+                    System.out.println("El valor de "+cantidad + " [ARS] son =>> " + resultado + " [USD]");
                     break;
                 case 3:
                     System.out.print("Ingrese cantidad en Dólares: ");
                     cantidad = scn.nextDouble();
                     resultado = cantidad * moneda.getConversion_rates().get("BRL");
-                    System.out.println(cantidad + " USD son " + resultado + " BRL");
+                    System.out.println("El valor de "+cantidad + " [USD] son =>> " + resultado + " [BRL]");
                     break;
                 case 4:
                     System.out.print("Ingrese cantidad en Reales Brasileños: ");
                     cantidad = scn.nextDouble();
                     resultado = cantidad / moneda.getConversion_rates().get("BRL");
-                    System.out.println(cantidad + " BRL son " + resultado + " USD");
+                    System.out.println("El valor de "+cantidad + " [BRL] son =>> " + resultado + " [USD]");
                     break;
                 case 5:
                     System.out.print("Ingrese cantidad en Dólares: ");
                     cantidad = scn.nextDouble();
                     resultado = cantidad * moneda.getConversion_rates().get("COP");
-                    System.out.println(cantidad + " USD son " + resultado + " COP");
+                    System.out.println("El valor de "+cantidad + " [USD] son =>> " + resultado + " [COP]");
                     break;
                 case 6:
                     System.out.print("Ingrese cantidad en Pesos Colombianos: ");
                     cantidad = scn.nextDouble();
                     resultado = cantidad / moneda.getConversion_rates().get("COP");
-                    System.out.println(cantidad + " COP son " + resultado + " USD");
+                    System.out.println("El valor de "+cantidad + " [COP] son =>> " + resultado + " [USD]");
                 case 7:
                     System.out.println("Gracias por usar el conversor. ¡Hasta luego!");
                     break;

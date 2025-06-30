@@ -5,11 +5,15 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.Scanner;
 
 public class CambioMoneda {
     public ConversionResponse guardarMoneda() {
-        String key = "754f4fbe4b877eb6fc6dfc40";
-        URI direccion = URI.create( "https://v6.exchangerate-api.com/v6/"+key+"/latest/USD");
+        Scanner scn = new Scanner(System.in);
+        System.out.println("Ingrese su apiKey");
+        String apikey = scn.next();
+
+        URI direccion = URI.create( "https://v6.exchangerate-api.com/v6/"+apikey+"/latest/USD");
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
