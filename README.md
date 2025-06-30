@@ -32,7 +32,7 @@ La aplicación soporta conversiones entre:
 
 ## 🛠 Tecnologías
 
-- Java 11+  
+- Java 21 (compatible con Java 11+)
 - [Gson](https://github.com/google/gson) para manejo de JSON  
 - API ExchangeRate-API para tasas de cambio  
 - Java HttpClient para solicitudes HTTP  
